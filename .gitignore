@@ -1,0 +1,35 @@
+# Arquivos do Python
+*.pyc
+*.pyo
+*.egg-info/
+__pycache__/
+*.egg
+
+# Diretórios de ambiente virtual
+venv/
+*.venv/
+env/
+ENV/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.code-workspace
+
+# Logs e bancos de dados
+*.log
+*.sqlite
+
+# Selenium: arquivos de driver específicos
+chromedriver.exe
+geckodriver.exe
+msedgedriver.exe
+
+# Outros arquivos temporários
+*.bak
+*.cache/
+*.tmp
+*.retry
