@@ -39,9 +39,46 @@ botao = driver.find_element(By.ID, 'buttonalerta')
 botoes = driver.find_elements(By.ID, 'buttonalerta')
 
 if botao is not None:
-    print('Elemento encontrado!')
+    print(f'Botão encontrado: {botao.text}')
 if botoes is not None:
-    print('Elementos encontrados!')
+    print(f'{len(botoes)} elementos encontrados!')
+
+campo_nome = driver.find_element(By.NAME, 'seu-nome')
+radio_buttons = driver.find_elements(By.NAME, 'exampleRadios')
+
+if campo_nome is not None:
+    print(f'Campo encontrado: {campo_nome.get_attribute("placeholder")}')
+if radio_buttons is not None:
+    print(f'{len(radio_buttons)} radio buttons encontrados!')
+
+logo = driver.find_element(By.CLASS_NAME, 'navbar-brand')
+links_menu = driver.find_elements(By.CLASS_NAME, 'nav-link')
+
+if logo is not None:
+    print(f'Logo encontrado: {logo.text}')
+if links_menu is not None:
+    print(f'{len(links_menu)} links encontrados!')
+
+link_home = driver.find_element(By.LINK_TEXT, 'Home')
+links_partial_text = driver.find_elements(By.PARTIAL_LINK_TEXT, 'Des')
+
+if link_home is not None:
+    print(f'Link encontrado: {link_home.text}')
+if links_partial_text is not None:
+    print(f'{len(links_partial_text)} links encontrados!')
+
+titulo = driver.find_element(By.XPATH, '//*[text()="ZONA DE TESTES"]')
+
+if titulo is not None:
+    print(f'Título encontrado: {titulo.text}')
+
+titulo_da_pagina = driver.find_element(By.TAG_NAME, 'h1')
+elementos_h4 = driver.find_elements(By.TAG_NAME, 'h4')
+
+if titulo_da_pagina is not None:
+    print(f'Título encontrado: {titulo_da_pagina.text}')
+if elementos_h4 is not None:
+    print(f'{len(elementos_h4)} elementos encontrados!')
 
 input('Pressione qualquer tecla para fechar o navegador...')
 driver.close()
